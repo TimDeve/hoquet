@@ -1,0 +1,29 @@
+(load "hoquet.carp")
+(load "elements.carp")
+
+(use Hoquet)
+
+(h "p"
+   {@"id" @"myid"
+    @"class" @"myclass"}
+   [@"Body"])
+
+(h "img" {@"src" @"http://www.example.com"} [])
+
+(h "br" {} [])
+
+(h "html"
+   {}
+   [(h "body"
+       {}
+       [(h "p" {@"style" @"color: red;"} [@"This is a paragraph"])
+        (h "p" {} [@"This is a second paragraph"])])])
+
+
+(use Elements)
+
+
+(html {}
+  [(body {}
+    [(img {@"src" @"http://www.example.com/image.jpg"})
+     (p {} [@"Some text!"])])])
