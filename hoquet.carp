@@ -11,13 +11,13 @@
     (==> (to-array &args)
          (ref)
          (copy-map
-                &(fn [arg]
-                    (String.concat &[@" "
-                                     @(Pair.a arg)
-                                     @"="
-                                     @"\""
-                                     @(Pair.b arg)
-                                     @"\""])))
+          &(fn [arg]
+             (String.concat &[@" "
+                              @(Pair.a arg)
+                              @"="
+                              @"\""
+                              @(Pair.b arg)
+                              @"\""])))
          (ref)
          (String.concat)))
 
