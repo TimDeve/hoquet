@@ -25,7 +25,6 @@
   (Elements.create-self-closing-element wb)
 
   (Elements.create-element abbr)
-  ;(Elements.create-element address)
   (Elements.create-element article)
   (Elements.create-element aside)
   (Elements.create-element audio)
@@ -73,7 +72,6 @@
   (Elements.create-element label)
   (Elements.create-element legend)
   (Elements.create-element li)
-  ;(Elements.create-element main)
   (Elements.create-element map)
   (Elements.create-element mark)
   (Elements.create-element menu)
@@ -122,4 +120,9 @@
   (Elements.create-element ul)
   (Elements.create-element var)
   (Elements.create-element video)
-  (Elements.create-element wbr))
+  (Elements.create-element wbr)
+
+  ;(Elements.create-element address)
+  (defn address-h [args children] (h "address" args children))
+  ;(Elements.create-element main)
+  (defn main-h [args children] (h "main" args children)))

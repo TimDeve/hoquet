@@ -22,7 +22,6 @@
 
 (use Elements)
 
-
 (html {}
   [(body {}
     [(img {@"src" @"http://www.example.com/image.jpg"})
