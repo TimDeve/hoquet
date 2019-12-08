@@ -1,3 +1,5 @@
+(load "config.carp")
+
 (load "hoquet.carp")
 (load "elements.carp")
 

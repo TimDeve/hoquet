@@ -1,5 +1,3 @@
-(load "config.carp")
-
 (use Array)
 (use String)
 (use Map)
