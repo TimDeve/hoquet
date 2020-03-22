@@ -1,3 +1,0 @@
-(Project.config "title" "Hoquet")
-(Project.config "compiler" "gcc")
-

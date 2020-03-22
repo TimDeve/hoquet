@@ -1,7 +1,7 @@
-(load "config.carp")
+(Project.config "title" "Hoquet")
+(Project.config "compiler" "gcc")
 
 (load "hoquet.carp")
-(load "elements.carp")
 
 (use Hoquet)
 
