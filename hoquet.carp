@@ -1,34 +1,3 @@
-(use Array)
-(use String)
-(use Map)
-
-(defmodule Hoquet
-  (private stringify-args)
-  (sig stringify-args (Fn [(Map String String)] String))
-  (defn stringify-args [args]
-    (==> (to-array &args)
-         (ref)
-         (copy-map
-          &(fn [arg]
-             (String.concat &[@" "
-                              @(Pair.a arg)
-                              @"="
-                              @"\""
-                              @(Pair.b arg)
-                              @"\""])))
-         (ref)
-         (String.concat)))
-
-  (sig h (Fn [&String (Map String String) (Array String)] String))
-  (defn h [el args children]
-    (if (= (Array.length &children) 0)
-      (String.concat &[@"<" @el (stringify-args args) @">"])
-      (String.concat &[@"<"
-                       @el
-                       (stringify-args args)
-                       @">"
-                       (String.concat &children)
-                       @"</"
-                       @el
-                       @">"]))))
+(load "h.carp")
+(load "elements.carp")
 

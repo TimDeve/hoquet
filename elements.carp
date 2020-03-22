@@ -1,4 +1,4 @@
-(load "hoquet.carp")
+(load "h.carp")
 
 (use Hoquet)
 
