@@ -5,29 +5,31 @@
 
 (use Hoquet)
 
-(h "p"
-   {@"id" @"myid"
-    @"class" @"myclass"}
-   [@"Body"])
+(defn main []
+  (do
+    (println* (h "p"
+               {@"id" @"myid"
+                @"class" @"myclass"}
+               [@"Body"]))
 
-(h "img" {@"src" @"http://www.example.com"} [])
+    (println* (h "img" {@"src" @"http://www.example.com"} []))
 
-(h "br" {} [])
+    (println* (h "br" {} []))
 
-(h "html"
-   {}
-   [(h "body"
-       {}
-       [(h "p" {@"style" @"color: red;"} [@"This is a paragraph"])
-        (h "p" {} [@"This is a second paragraph"])])])
+    (println* (h "html"
+               {}
+               [(h "body"
+                   {}
+                   [(h "p" {@"style" @"color: red;"} [@"This is a paragraph"])
+                    (h "p" {} [@"This is a second paragraph"])])]))
 
-(use Elements)
-
-(html {}
-      [(body {@"style" @"display: flex;"}
-             [(main-h {@"style" @"width: 50vw;"}
-                      [(img {@"src" @"https://via.placeholder.com/150"})
-                       (p {} [@"Some text!"])])
-              (aside {}
-                     [(p {} [@"This is a sidebar"])])])])
+    (with Elements
+      (println* (html {}
+                     [(body {@"style" @"display: flex;"}
+                            [(main-h {@"style" @"width: 50vw;"}
+                                     [(img {@"src" @"https://via.placeholder.com/150"})
+                                      (p {} [@"Some text!"])])
+                             (aside {}
+                                    [(p {} [@"This is a sidebar"
+                                            (a {@"href" @"https://example.com"} [@"A link"])])])])])))))
 

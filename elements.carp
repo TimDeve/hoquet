@@ -24,6 +24,7 @@
   (Elements.create-self-closing-element track)
   (Elements.create-self-closing-element wb)
 
+  (Elements.create-element a)
   (Elements.create-element abbr)
   (Elements.create-element article)
   (Elements.create-element aside)
