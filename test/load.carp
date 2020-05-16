@@ -1,0 +1,12 @@
+(Debug.sanitize-addresses)
+
+(load "Test.carp")
+(load "../hoquet.carp")
+
+(use Test)
+
+(deftest test
+ (assert-equal test
+  "/path/one"
+  &(Hoquet.load-css "./test.css")
+  "Parse path"))

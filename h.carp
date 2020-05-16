@@ -31,5 +31,9 @@
                        (String.concat &children)
                        @"</"
                        @el
-                       @">"]))))
+                       @">"])))
+
+  (defmacro load-css [path]
+    (list 'Hoquet.h "style" '{@"type" @"text/css"}
+       (array (list 'copy (Dynamic.read-file path))))))
 
